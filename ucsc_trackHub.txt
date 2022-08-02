@@ -1,0 +1,611 @@
+hub EpiMapCustom
+shortLabel EpiMap release v0.9 (Custom TrackHub)
+longLabel Custom trackHub per mark and sample group tracks for EpiMap v0.9
+useOneFile on
+email cboix@mit.edu
+
+
+genome hg19
+
+track EpiMapBWSig
+compositeTrack on
+shortLabel All Signal Tracks
+longLabel All observed and imputed signal tracks from EpiMap
+group epimap
+subGroup1 view Views Sig=Signal
+subGroup2 sampleType Sample_Type BSS01181=lower_leg_skin_female_adult_(53_years) BSS01182=lower_leg_skin_male_adult_(37_years) BSS01419=peripheral_blood_mononuclear_cell_female_adult_(28_years) BSS01420=peripheral_blood_mononuclear_cell_male_adult_(27_years)
+subGroup3 assayType Assay_Type  H3K4me3=H3K4me3 H3K9me3=H3K9me3 H3K27ac=H3K27ac H3K27me3=H3K27me3 H3K36me3=H3K36me3 H3K4me1=H3K4me1 DNase-seq=DNase-seq
+subGroup4 dataType Data_Type Observed=Observed Imputed=Imputed
+subGroup5 donor Donor  ENCDO839WKQ=ENCDO839WKQ ENCDO250QGI=ENCDO250QGI ENCDO793LXB=ENCDO793LXB ENCDO845WKR=ENCDO845WKR
+dimensions dimensionX=assayType dimensionY=sampleType dimA=dataType dimB=donor
+filterComposite on
+sortOrder cellType=+ assayType=+ donor=+
+dragAndDrop on
+visibility hide
+priority 21
+type bed 3
+noInherit on
+
+track EpiMapBWSigView
+shortLabel Signal
+view Sig
+maxHeightPixels 64:32:16
+parent EpiMapBWSig
+type bigWig
+visibility dense
+
+track BW_BSS01181_H3K36me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K36me3 lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K36me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_H3K27me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K27me3 lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K27me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_H3K4me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K4me3 lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K4me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_H3K27ac_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K27ac lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K27ac dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_H3K4me1_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K4me1 lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K4me1 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_H3K9me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01181 H3K9me3 lower leg skin female adult (53 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01181_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=H3K9me3 dataType=Imputed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01181_DNase-seq_Obs
+shortLabel Obs SKIN LEG
+longLabel BSS01181 DNase-seq lower leg skin female adult (53 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_DNase-seq_BSS01181.sub_VS_Uniform_BKG_CONTROL_36_50000000.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin female adult (53 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="female" "Donor"="ENCDO793LXB"
+subGroups view=Sig sampleType=BSS01181 assayType=DNase-seq dataType=Observed donor=ENCDO793LXB
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K27ac_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 H3K27ac lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K27ac dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K27me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 H3K27me3 lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K27me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K36me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 H3K36me3 lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K36me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K4me1_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 H3K4me1 lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K4me1 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_DNase-seq_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 DNase-seq lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=DNase-seq dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K4me3_Obs
+shortLabel Obs SKIN LEG
+longLabel BSS01182 H3K4me3 lower leg skin male adult (37 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01182.sub_VS_FINAL_WCE_BSS01182.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K4me3 dataType=Observed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01182_H3K9me3_Imp
+shortLabel Imp SKIN LEG
+longLabel BSS01182 H3K9me3 lower leg skin male adult (37 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01182_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 255,157,12
+metadata "Epigenome ShortName"="SKIN LEG" "Epigenome FullName"="lower leg skin male adult (37 years)" "Group"="<span style="color:#FF9D0C">Epithelial</span>" "Type"="tissue" "Sex"="male" "Donor"="ENCDO845WKR"
+subGroups view=Sig sampleType=BSS01182 assayType=H3K9me3 dataType=Imputed donor=ENCDO845WKR
+parent EpiMapBWSigView off
+
+track BW_BSS01419_DNase-seq_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 DNase-seq peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=DNase-seq dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K9me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01419 H3K9me3 peripheral blood mononuclear cell female adult (28 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS01419.sub_VS_FINAL_WCE_BSS01419.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K9me3 dataType=Observed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K4me1_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K4me1 peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K4me1 dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K9me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K9me3 peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K9me3 dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K4me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K4me3 peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K4me3 dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K27me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01419 H3K27me3 peripheral blood mononuclear cell female adult (28 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27me3_BSS01419.sub_VS_FINAL_WCE_BSS01419.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K27me3 dataType=Observed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K36me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01419 H3K36me3 peripheral blood mononuclear cell female adult (28 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K36me3_BSS01419.sub_VS_FINAL_WCE_BSS01419.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K36me3 dataType=Observed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K27ac_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K27ac peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K27ac dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K27me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K27me3 peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K27me3 dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K36me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01419 H3K36me3 peripheral blood mononuclear cell female adult (28 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01419_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K36me3 dataType=Imputed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K4me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01419 H3K4me3 peripheral blood mononuclear cell female adult (28 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01419.sub_VS_FINAL_WCE_BSS01419.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K4me3 dataType=Observed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01419_H3K27ac_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01419 H3K27ac peripheral blood mononuclear cell female adult (28 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K27ac_BSS01419.sub_VS_FINAL_WCE_BSS01419.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell female adult (28 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="female" "Donor"="ENCDO839WKQ"
+subGroups view=Sig sampleType=BSS01419 assayType=H3K27ac dataType=Observed donor=ENCDO839WKQ
+parent EpiMapBWSigView off
+
+track BW_BSS01420_DNase-seq_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 DNase-seq peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_DNase-seq.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=DNase-seq dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K4me1_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01420 H3K4me1 peripheral blood mononuclear cell male adult (27 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me1_BSS01420.sub_VS_FINAL_WCE_BSS01420.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K4me1 dataType=Observed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K4me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01420 H3K4me3 peripheral blood mononuclear cell male adult (27 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K4me3_BSS01420.sub_VS_FINAL_WCE_BSS01420.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K4me3 dataType=Observed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K9me3_Obs
+shortLabel Obs MONONUCLEAR CELL
+longLabel BSS01420 H3K9me3 peripheral blood mononuclear cell male adult (27 years) (Observed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/observed/FINAL_H3K9me3_BSS01420.sub_VS_FINAL_WCE_BSS01420.pval.signal.bedgraph.gz.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K9me3 dataType=Observed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K4me1_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K4me1 peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K4me1.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K4me1 dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K4me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K4me3 peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K4me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K4me3 dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K27me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K27me3 peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K27me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K27me3 dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K9me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K9me3 peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K9me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K9me3 dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K36me3_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K36me3 peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K36me3.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K36me3 dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
+
+track BW_BSS01420_H3K27ac_Imp
+shortLabel Imp MONONUCLEAR CELL
+longLabel BSS01420 H3K27ac peripheral blood mononuclear cell male adult (27 years) (Imputed)
+bigDataUrl https://epigenome.wustl.edu/epimap/data/imputed/impute_BSS01420_H3K27ac.bigWig
+type bigWig 0 30
+viewLimits 0.0:30.0
+noInherit on
+autoScale on
+yLineOnOff on
+maxHeightPixels 64:32:16
+priority 1
+color 103,140,105
+metadata "Epigenome ShortName"="MONONUCLEAR CELL" "Epigenome FullName"="peripheral blood mononuclear cell male adult (27 years)" "Group"="<span style="color:#678C69">Blood & T-cell</span>" "Type"="primary cell" "Sex"="male" "Donor"="ENCDO250QGI"
+subGroups view=Sig sampleType=BSS01420 assayType=H3K27ac dataType=Imputed donor=ENCDO250QGI
+parent EpiMapBWSigView off
